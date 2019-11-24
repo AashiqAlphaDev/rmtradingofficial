@@ -1,0 +1,60 @@
+version: '3'
+services:
+  web:
+    image: node
+    environment:
+      - SUPER_ADMIN_USER=karthik1729
+      - SUPER_ADMIN_PASSWORD=karthik001
+      - FRONTEND_HOST=http://localhost:3001
+    depends_on:
+      - db
+      - elastic_search
+    volumes:
+      - "./backend:/tmp"
+    working_dir: /tmp
+    entrypoint: npm start
+    ports:
+      - 3000:3000
+
+  elastic_search:
+    image: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+
+  data_generation:
+    image: node
+    depends_on:
+      - db
+      - elastic_search
+    volumes:
+      - "./data-generations:/tmp"
+    working_dir: /tmp
+    entrypoint: npm start
+
+  kibana:
+    image: kibana
+    ports:
+     - 5601:5601
+    depends_on:
+      - elastic_search
+    environment:
+      - ELASTICSEARCH_URL=http://192.168.1.10:9200
+
+  frontend:
+    image: node
+    depends_on:
+      - web
+    volumes:
+      - "./frontend-client:/tmp"
+    working_dir: /tmp
+    entrypoint: npm start
+    ports:
+     - 3001:3000
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - "./sample_db:/data/db"
