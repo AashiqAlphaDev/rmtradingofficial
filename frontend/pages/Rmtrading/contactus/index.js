@@ -202,36 +202,36 @@ let _Index = class extends React.Component {
                 <Typography variant={"subtitle"} className={classes.contactTitle}>
                     Contact Us On
                 </Typography>
-                    <Layout justifyContent={"center"} className={classes.flex}>
-                        <form  onSubmit={(e) => {
-                            e.preventDefault();
+                    {/*<Layout justifyContent={"center"} className={classes.flex}>*/}
+                        {/*<form  onSubmit={(e) => {*/}
+                            {/*e.preventDefault();*/}
 
-                        }} className={classes.flexBox}>
-                            <InputContainer label={"Name"}>
-                                <TextField >
-                                </TextField>
-                            </InputContainer>
-                            <InputContainer label={"Address"}>
-                                <TextField >
-                                </TextField>
-                            </InputContainer>
-                            <InputContainer label={"Phone No"}>
-                                <TextField >
-                                </TextField>
-                            </InputContainer>
-                            <InputContainer label={"Email ID"}>
-                                <TextField >
-                                </TextField>
-                            </InputContainer>
-                            <InputContainer label={"Query"}>
-                                <TextField >
-                                </TextField>
-                            </InputContainer>
-                            <Layout className={classes.buttonLayout}>
-                                <Button variant={"raised"} >Submit</Button>
-                            </Layout>
-                        </form>
-                    </Layout>
+                        {/*}} className={classes.flexBox}>*/}
+                            {/*<InputContainer label={"Name"}>*/}
+                                {/*<TextField >*/}
+                                {/*</TextField>*/}
+                            {/*</InputContainer>*/}
+                            {/*<InputContainer label={"Address"}>*/}
+                                {/*<TextField >*/}
+                                {/*</TextField>*/}
+                            {/*</InputContainer>*/}
+                            {/*<InputContainer label={"Phone No"}>*/}
+                                {/*<TextField >*/}
+                                {/*</TextField>*/}
+                            {/*</InputContainer>*/}
+                            {/*<InputContainer label={"Email ID"}>*/}
+                                {/*<TextField >*/}
+                                {/*</TextField>*/}
+                            {/*</InputContainer>*/}
+                            {/*<InputContainer label={"Query"}>*/}
+                                {/*<TextField >*/}
+                                {/*</TextField>*/}
+                            {/*</InputContainer>*/}
+                            {/*<Layout className={classes.buttonLayout}>*/}
+                                {/*<Button variant={"raised"} >Submit</Button>*/}
+                            {/*</Layout>*/}
+                        {/*</form>*/}
+                    {/*</Layout>*/}
 
             </Layout>
 

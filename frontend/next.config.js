@@ -11,6 +11,7 @@ module.exports = {
     },
     exportPathMap:async function (defaultPathMap){
         return {
+            '/':{page:'/Rmtrading/home'},
             '/content-page/:link_id/link': {page: '/content-page'},
             '/content-page/:collection_id/collections' :{page:'/collections'},
             '/content-page/:collection_id/collection' :{page:'/content-page'}
